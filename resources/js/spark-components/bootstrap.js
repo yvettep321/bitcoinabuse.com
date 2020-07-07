@@ -54,6 +54,11 @@ require('./settings/api/create-token');
 require('./settings/api/tokens');
 
 /**
+ * Custom Contributor Badge
+ */
+require('./settings/contributor-badge');
+
+/**
  * Subscription Settings Components...
  */
 require('./settings/subscription');
