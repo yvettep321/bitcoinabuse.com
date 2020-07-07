@@ -26,12 +26,6 @@ class BitcoinAddress implements Rule
 
 	public function passes($attribute, $value)
 	{
-		//example of invalid bitcoin address: 3He1qMyChQzc2uv8TJcZ1ojenU4gKqAFeR
-		//this is currently passed as valid with this code. Have to fix this
-		//$pattern = "/^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$/";
-		//return preg_match($pattern, $value);
-
-		//this should work
 		return static::validate($value);
 	}
 
