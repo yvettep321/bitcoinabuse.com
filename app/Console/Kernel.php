@@ -33,6 +33,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('bitcoinabuse:export-reports --since=1d')->dailyAt('3:13');
 
         $schedule->command('spark:kpi')->dailyAt('23:55');
+        $schedule->command('telescope:prune --hours=48')->dailyAt('22:55');
 
         $schedule->command('geoip:update')->monthlyOn(7, '4:07');
     }
