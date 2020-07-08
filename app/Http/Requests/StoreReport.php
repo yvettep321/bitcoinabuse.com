@@ -29,7 +29,7 @@ class StoreReport extends FormRequest
 		return [
 			'address'              => ['required', new BitcoinAddress, Rule::notIn(['19cLzeMHrLXRpF5tfQDqMMDSuHq9VoXJXf'])],
 			'abuse_type_id'        => 'required|exists:abuse_types,id', // must be a valid abuse_type_id
-			'abuse_type_other'     => 'required_if:abuse_type_id,99', // if abuse_type_id is other, then must specify
+			'abuse_type_other'     => 'required_if:abuse_type_id,99|max:191', // if abuse_type_id is other, then must specify
 			'abuser'               => 'required|between:3,100',
 			'description'          => 'required|between:10,2000',
 			'g-recaptcha-response' => [new Recaptcha]
