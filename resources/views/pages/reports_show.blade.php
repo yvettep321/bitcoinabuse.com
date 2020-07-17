@@ -24,6 +24,7 @@
 	</div>
 
 	<div class="container mb-4">
+		@include('ads.sponsored-banner')
 
 		@if (Request::session()->has('status'))
 		<div class="alert alert-primary text-center" role="alert">

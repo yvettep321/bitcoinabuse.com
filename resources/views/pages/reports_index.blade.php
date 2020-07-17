@@ -24,6 +24,7 @@
 	</div>
 
 	<div class="container">
+		@include('ads.sponsored-banner')
 		<div class="row">
 			<div class="col-md-6">
 				<p>
