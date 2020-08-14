@@ -11,7 +11,7 @@
 	</head>
 	<body style="margin:0;">
 
-	<div class="big-banner" style="max-height: 250px;">
+	<div class="big-banner">
 		<div class="big-content">
 			<div class="logo-big"></div>
 			<h1>Manage AML risk. Streamline compliance.</h1>
