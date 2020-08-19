@@ -16,7 +16,7 @@
 			<div class="logo-big"></div>
 			<h1>Manage AML risk. Streamline compliance.</h1>
 			<h2>Get the crypto equivalent of a credit score with <b>BitRank</b>.</h2>
-			<a href="http://bigcs.com/bitrank#utm_source=bitcoinabuse.com&utm_medium=banner&utm_campaign=campaign_one"
+			<a href="http://bigcs.com/bitrank?utm_source=bitcoinabuse.com&utm_medium=banner&utm_campaign=campaign_one"
 				target="_blank"
 				rel="sponsored"
 				class="stretched-link"
