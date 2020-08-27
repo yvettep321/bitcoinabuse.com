@@ -109,8 +109,6 @@
 			Hopefully by sharing this information fewer people will fall for these scams.
 		</p>
 
-		@include('ads.sponsored-faq')
-
 		<h4 class="mt-5"> How is BitcoinAbuse.com supported? </h4>
 
 		<p>
