@@ -46,6 +46,11 @@ class ContactController extends Controller
 			$request->session()->flash('status', "Message received. We'll be in touch");
 			\Mail::to(config('site.support-email'))->send(new ContactSumbitted($data));
 		}
+		if (geoip(Request::ip())->country == "Russia")
+		{
+			// this message contains 2 periods at the end to indicate the message was not sent.
+			$request->session()->flash('status', "Message received. We'll be in touch..");
+		}
 		else
 		{
 			// this message contains a period at the end to indicate the message was not sent.
