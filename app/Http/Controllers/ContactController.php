@@ -37,11 +37,6 @@ class ContactController extends Controller
 			// this message contains a period at the end to indicate the message was not sent.
 			$request->session()->flash('status', "Message received. We'll be in touch.");
 		}
-		if (geoip($request->ip())->country == "Russia")
-		{
-			// this message contains 2 periods at the end to indicate the message was not sent.
-			$request->session()->flash('status', "Message received. We'll be in touch..");
-		}
 		else
 		{
 			$request->session()->flash('status', "Message received. We'll be in touch");
