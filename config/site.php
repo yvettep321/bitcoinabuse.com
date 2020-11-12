@@ -12,5 +12,6 @@ return [
     'recaptcha_private_key' => env('RECAPTCHA_PRIVATE_KEY'),
 
     'banned_words' => explode(' ', env('BANNED_WORDS')),
+    'banned_countries' => explode(' ', env('BANNED_COUNTRIES')),
 
 ];
