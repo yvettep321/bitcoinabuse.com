@@ -6,20 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\StoreContact;
 
-use App\Mail\ContactSumbitted;
+use App\Mail\ContactSubmitted;
 
 class ContactController extends Controller
 {
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	// public function index()
-	// {
-	//     //
-	// }
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -41,15 +31,16 @@ class ContactController extends Controller
 		$data = $request->input();
 
 		$banned_words = config('site.banned_words');
-		if (!$this->check_wordlist($request->input('message'), $banned_words))
-		{
-			$request->session()->flash('status', "Message received. We'll be in touch");
-			\Mail::to(config('site.support-email'))->send(new ContactSumbitted($data));
-		}
-		else
+		$banned_countries = config('site.banned_countries');
+		if ($this->check_wordlist($request->input('message'), $banned_words) || $this->check_wordlist(geoip($request->ip())->country, $banned_countries))
 		{
 			// this message contains a period at the end to indicate the message was not sent.
 			$request->session()->flash('status', "Message received. We'll be in touch.");
+		}
+		else
+		{
+			$request->session()->flash('status', "Message received. We'll be in touch");
+			\Mail::to(config('site.support-email'))->send(new ContactSubmitted($data));
 		}
 
 		return view('pages.contact');

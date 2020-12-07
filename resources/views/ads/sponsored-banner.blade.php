@@ -1,1 +1,0 @@
-<iframe src="/big-banner" title="sponsored" style="width:100%; height: 260px; overflow:hidden; border:none;" class="mb-3"></iframe>

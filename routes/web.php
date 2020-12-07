@@ -34,8 +34,3 @@ Route::resource('reports', 'ReportController', ['only' => [
 ]]);
 
 Route::get('reports/{address}', 'ReportController@show');
-
-
-Route::get('/big-banner', function() {
-	return view('ads.sponsored-banner-iframe');
-});

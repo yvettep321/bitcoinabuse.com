@@ -30,7 +30,7 @@
 	</div>
 
 	<div class="container">
-		@include('ads.sponsored-banner')
+		@include('ads.unit_1')
 		<div class="row">
 			<div class="col-md-4">
 				<h3>Report Bitcoin Addresses</h3>
