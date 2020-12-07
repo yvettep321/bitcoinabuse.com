@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: bitcoinabuse.com
+Token: f6c8c4f452a5de097a12e4486a0cc8ecd628badd1caf620a13199a751d3dfc68
