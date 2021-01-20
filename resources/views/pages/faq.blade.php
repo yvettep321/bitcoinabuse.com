@@ -103,11 +103,25 @@
 		</p>
 
 		<h4 class="mt-5">So why should I file a report at all?</h4>
-		<p>
-			The biggest reason to file a report about a certain address is it will help others see they are not alone.
-			Many people are getting the exact same spam emails and they are all phony.
-			Hopefully by sharing this information fewer people will fall for these scams.
+		<p>            
+			One great reason to file a report about a certain address is it will help others see they are not alone.
+			Many people are getting the exact same spam emails and they are all phony, 
+            hopefully by sharing this information fewer people will fall for these scams.
 		</p>
+        <p>
+            But reporting also helps fight back against spam and extortion in a more direct way: by marking the addresses,
+            and the coins associated with them, as illegitimate gains in a public record for all times. Someone might,
+            for instance, Google the bitcoin address of a person seeking to spend the bitcoins, see it listed here,
+            and refuse to do business with a thief. Or a large service that accepts bitcoin might check this database
+            automatically, flagging transactions from these addresses as fraudulent.
+        </p>
+        <p>
+            Criminals could, of course, get around these simpler measures by transferring the money to another address 
+            (which would cost them a transaction fee), or by mixing their coins in a laundering service (which would cost 
+            them a substantially higher fee). That would cost their time and money, and may still not be enough as coin-tracing
+            algorithms improve. One thing is for certain: here, their misdeeds will be recorded forever for anyone who cares to 
+            know who they're doing business with, helping discourage future fraud and extortion. 
+       </p>
 
 		<h4 class="mt-5"> How is BitcoinAbuse.com supported? </h4>
 
