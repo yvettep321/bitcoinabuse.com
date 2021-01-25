@@ -54,7 +54,7 @@
 										class="pointer"
 										data-toggle="popover" data-trigger="hover"
 										title="Support Address Formats"
-										data-content='There are 3 supported formats: <ol><li>P2PKH (Starts with "1")</li><li>P2SH (Starts with "3")</li><li>Bech32 (Starts with "bc1")</li></ol>'>
+										data-content='There are 3 supported formats: <ol class="pl-4"><li>P2PKH (Starts with "1")</li><li>P2SH (Starts with "3")</li><li>Bech32 (Starts with "bc1")</li></ol>'>
 									<i class="fas fa-question-circle"></i></a>
 								</label>
 								<input type="text" name="address" class="form-control" id="address" placeholder="1L1YwaHKfNGxGx6PGYp6SC6uA14tP9FbXt" value="{{ old('address', Request::input('address')) }}">
@@ -91,6 +91,38 @@
 								<small id="descriptionHelp" class="form-text text-muted">Do not include personal information such as your email address</small>
 							</div>
 
+							<div class="form-check my-4">
+								<input type="checkbox" class="form-check-input" id="optin" name="contact_optin" {{ old('contact_optin') ? "checked" : "" }}>
+								<label for="optin">Share my contact information with applicable law enforcement.
+									<a tabindex="0"
+										class="pointer"
+										data-toggle="popover" data-trigger="hover"
+										title="Opt-in to Share Contact Info"
+										data-content='<b>[Optional]</b> We will share your contact information with applicable law enforcemnt, if requested. In some cases, law enforcement may contact you for a victim statement. We may also share your contact information with qualified investigators who can help recover lost funds.'>
+									<i class="fas fa-question-circle"></i></a>
+								</label>
+							</div>
+							<div id="contactblock" style="display:none;">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="email">Contact Email Address</label>
+											<input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" placeholder="[Private]" />
+											<small id="emailHelp" class="form-text text-muted">Optional. Will NOT be made public.</small>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="phone">Contact Phone Number</label>
+											<input type="tel" class="form-control" name="phone" id="phone" value="{{ old('phone') }}" placeholder="[Private]" />
+											<small id="phoneHelp" class="form-text text-muted">Optional. Will NOT be made public.</small>
+										</div>
+									</div>
+								</div>
+								<hr>
+							</div>
+
+
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -100,7 +132,7 @@
 								</div>
 								<div class="col-md-6 text-right">
 									<input type="submit" id="submit-button" class="btn btn-primary btn-lg mt-4" />
-									<small class="form-text text-muted">All information submitted will be public</small>
+									<small class="form-text text-muted" id="publicinfowarning">All information submitted will be public</small>
 								</div>
 							</div>
 
@@ -154,8 +186,6 @@
 <script>
 $('#submit-button').click(function(event)
 {
-	console.log('backherererer');
-
 	// Fancy way of seeing if the description contains the @ symbol
 	// https://wsvincent.com/javascript-tilde/
 	if (~$('#description').val().indexOf("@"))
@@ -167,7 +197,6 @@ $('#submit-button').click(function(event)
 });
 $('#submit-override').click(function(event)
 {
-	console.log('here');
 	$('#create-form').submit();
 });
 
@@ -175,5 +204,26 @@ $('#submit-override').click(function(event)
 $(function () {
   $('[data-toggle="popover"]').popover({ html: true})
 })
+
+$(document).ready(function() {
+	if ($('#optin').is(":checked")) {
+		showContact()
+	}
+	$('#optin').click(function() {
+		if ($(this).is(':checked')) {
+			showContact()
+		} else {
+			hideContact()
+		}
+	});
+})
+function showContact() {
+	$('#contactblock').slideDown()
+	$('#publicinfowarning').text('All information submitted will be public (Except your contact information will remain private)')
+}
+function hideContact() {
+	$('#contactblock').slideUp()
+	$('#publicinfowarning').text('All information submitted will be public')
+}
 </script>
 @stop

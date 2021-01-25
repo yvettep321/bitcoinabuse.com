@@ -32,6 +32,7 @@ class StoreReport extends FormRequest
 			'abuse_type_other'     => 'required_if:abuse_type_id,99|max:191', // if abuse_type_id is other, then must specify
 			'abuser'               => 'required|between:3,100',
 			'description'          => 'required|between:10,2000',
+			'email'				   => 'exclude_unless:optin,true|email',
 			'g-recaptcha-response' => [new Recaptcha]
 		];
 	}
@@ -45,8 +46,6 @@ class StoreReport extends FormRequest
 			$this->request->set('description', $this->request->get('description') . "\n\nAddress may appear as \"{$this->request->get('address')}\".");
 			$this->request->set('address', $modified);
 		}
-
-
 
 		return parent::validationData();
 	}

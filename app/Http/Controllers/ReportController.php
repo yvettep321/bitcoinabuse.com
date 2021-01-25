@@ -50,6 +50,9 @@ class ReportController extends Controller
 		$report->abuse_type_other = $request->input('abuse_type_other');
 		$report->abuser           = $request->input('abuser');
 		$report->description      = $request->input('description');
+		$report->contact_optin    = $request->has('contact_optin');
+		$report->email            = $request->has('contact_optin') ? $request->input('email') : null;
+		$report->phone            = $request->has('contact_optin') ? $request->input('phone') : null;
 
 		if (Auth::check())
 		{
