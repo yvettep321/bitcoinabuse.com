@@ -71,6 +71,6 @@ Please feel free to [contact us](/contact) with any questions.
 
 Email: support@bitcoinabuse.com
 
-BitcoinAbuse.com
-562 Independence Road
+BitcoinAbuse.com<br>
+562 Independence Road<br>
 East Stroudsburg, PA 18301
