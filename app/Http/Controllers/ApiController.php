@@ -108,10 +108,15 @@ class ApiController extends Controller
 		}
 
 		$count = Reports::whereAddress($request->input('address'))->count();
+		$dates = Reports::whereAddress($request->input('address'))->selectRaw('min(created_at) first_seen, max(created_at) last_seen')->first();
+		$recent = Reports::select(['abuse_type_id','abuse_type_other','description','created_at'])->whereAddress($request->input('address'))->latest()->limit(10)->get();
 
 		return [
 			'address' => $request->input('address'),
 			'count' => $count,
+			'first_seen' => $dates->first_seen,
+			'last_seen' => $dates->last_seen,
+			'recent' => $recent,
 		];
 	}
 
