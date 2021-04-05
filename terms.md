@@ -36,6 +36,16 @@ All original material on the website is copyrighted by BitcoinAbuse unless expli
 
 If you believe information on BitcoinAbuse is in violation of a copyright you hold, please contact us directly. Any confirmed infringing material will be removed as soon as possible.
 
+# Payment Terms
+
+## Refund Policy
+
+If you are unsatisfied with a paid product, please contact us as soon as possible. We will work with you to resolve any issues. If we are unable to resolve the problem we will issue a full refund.
+
+## Delivery Policy
+
+Digital products are delivered via email and are typically sent 10-15 minutes after purchase unless otherwise noted.
+
 # Privacy Policy
 
 In this policy, we'll spell out what information our site collects, and how it is used. Please note that this policy may change at any time without notice.
@@ -53,4 +63,14 @@ BitcoinAbuse may disclose aggregate, anonymous summaries of personal data to thi
 
 ## Comments and Notice
 
-This policy may be changed at any time without notice, so please check to make sure you are aware of the latest version. Please feel free to [contact us](/contact) with any questions.
+This policy may be changed at any time without notice, so please check to make sure you are aware of the latest version.
+
+## Contact Information
+
+Please feel free to [contact us](/contact) with any questions.
+
+Email: support@bitcoinabuse.com
+
+BitcoinAbuse.com
+562 Independence Road
+East Stroudsburg, PA 18301
