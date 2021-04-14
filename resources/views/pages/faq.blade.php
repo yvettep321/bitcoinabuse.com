@@ -27,7 +27,7 @@
 		<p>
 			BitcoinAbuse.com is a public database of bitcoin addresses used by scammers, hackers, and criminals.
 		<p>
-			Bitcoin is anonymous if used <u>perfectly</u>. Luckily, no one is perfect. Even hackers make mistakes. It only takes one slip to link stolen bitcoin to a hacker's their real identity.
+			Bitcoin is anonymous if used <u>perfectly</u>. Luckily, no one is perfect. Even hackers make mistakes. It only takes one slip to link stolen bitcoin to a hacker's real identity.
 			It is our hope that by making a public database of bitcoin addresses used by criminals it will be harder for criminals to convert the digital currency back into fiat money.
 		</p>
 
@@ -37,7 +37,7 @@
 		</p>
 		<p>
 			Blackmail demanding payment in Bitcoin is common.
-			Criminals send thousands of email a day claiming to have pictures or video of you in a compromising situation.
+			Criminals send thousands of emails a day claiming to have pictures or video of you in a compromising situation.
 			<i>If they really had pictures of you they would have shown you.</i>
 		</p>
 		<p>
@@ -103,9 +103,9 @@
 		</p>
 
 		<h4 class="mt-5">So why should I file a report at all?</h4>
-		<p>            
+		<p>
 			One great reason to file a report about a certain address is it will help others see they are not alone.
-			Many people are getting the exact same spam emails and they are all phony, 
+			Many people are getting the exact same spam emails and they are all phony,
             hopefully by sharing this information fewer people will fall for these scams.
 		</p>
         <p>
@@ -116,11 +116,11 @@
             automatically, flagging transactions from these addresses as fraudulent.
         </p>
         <p>
-            Criminals could, of course, get around these simpler measures by transferring the money to another address 
-            (which would cost them a transaction fee), or by mixing their coins in a laundering service (which would cost 
+            Criminals could, of course, get around these simpler measures by transferring the money to another address
+            (which would cost them a transaction fee), or by mixing their coins in a laundering service (which would cost
             them a substantially higher fee). That would cost their time and money, and may still not be enough as coin-tracing
-            algorithms improve. One thing is for certain: here, their misdeeds will be recorded forever for anyone who cares to 
-            know who they're doing business with, helping discourage future fraud and extortion. 
+            algorithms improve. One thing is for certain: here, their misdeeds will be recorded forever for anyone who cares to
+            know who they're doing business with, helping discourage future fraud and extortion.
        </p>
 
 		<h4 class="mt-5"> How is BitcoinAbuse.com supported? </h4>
