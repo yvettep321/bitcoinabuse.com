@@ -123,6 +123,8 @@
             know who they're doing business with, helping discourage future fraud and extortion.
        </p>
 
+		@include('ads.sponsored-faq')
+
 		<h4 class="mt-5"> How is BitcoinAbuse.com supported? </h4>
 
 		<p>
