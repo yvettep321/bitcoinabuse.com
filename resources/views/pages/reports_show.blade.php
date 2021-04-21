@@ -33,28 +33,33 @@
 		@endif
 
 		<div class="row mb-4">
-			<div class="col-md-8">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Address {!! (!$found ? '<b>not</b> ' : '') !!}found in database:</h5>
-						<table id="summary-table" class="table table-striped table-bordered">
+			<div class="col-lg-8">
+				<div class="card overflow-hidden">
+					<div class="card-header bg-white">
+						<h5 class="card-title mb-0">Address {!! (!$found ? '<b>not</b> ' : '') !!}found in database:</h5>
+					</div>
+						<table id="summary-table" class="table table-striped table-bordered mb-0">
 							<tbody>
 								<tr><th>Address</th><td><i>{{ $address }}</i></td></tr>
 								<tr><th>Report Count</th><td>{{ $reports->total() }}</td></tr>
 								<tr><th>Latest Report</th><td>{{ ($found ? $first_date->toRfc822String() : '—') }}<br>{{ ($found ? '('.$first_date->diffForHumans().')' : '') }}</td></tr>
 							</tbody>
 						</table>
+					<div class="card-footer">
 						@if (!$found)
-							<p class="mb-0"><i>This address has not been reported</i>. <a href="/reports/create?address={{ $address }}">File Report</a></p>
+							<p class="mb-0 text-muted"><i>This address has not been reported</i>. <a href="/reports/create?address={{ $address }}">File Report</a></p>
 						@else
 							<a href="https://blockchain.info/address/{{ $address }}" target=_blank class="button small" title="External link to blockchain.info">View address on blockchain.info <i class="fas fa-external-link-square-alt"></i></a>
-							<p class="mb-0"><i>If you have additional information about this address, please <a href="/reports/create?address={{ $address }}">file a report</a>.</i></p>
+							<p class="mb-0 text-muted"><i>If you have additional information about this address, please <a href="/reports/create?address={{ $address }}">file a report</a>.</i></p>
 						@endif
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				@include('ads.unit_1')
+
+			<div class="col-lg-4" style="display: none;" id="trace-ad">
+
+				@include('ads.trace-ad-1')
+
 			</div>
 		</div>
 
@@ -64,7 +69,6 @@
 				<tr>
 					<th class="small-2" style="min-width: 125px;">Date</th>
 					<th class="small-2">Abuse Type</th>
-					<th class="small-2">Abuser</th>
 					<th class="small-6">Description</th>
 				</tr>
 			</thead>
@@ -73,7 +77,6 @@
 				<tr>
 					<td>{{ $report->created_at->toFormattedDateString() }} </td>
 					<td>{{ $report->abuse_type->label }} </td>
-					<td>{{ $report->abuser }} </td>
 					<td>{{ $report->description }} </td>
 				</tr>
 				@endforeach
@@ -82,7 +85,11 @@
 		{{ $reports->links() }}
 
 		@if (!$found)
-			<p><i>This address has not been reported</i>. <a href="/reports/create?address={{ $address }}">File Report</a>
+			<p class="lead text-center text-muted"><i>This address has not been reported</i>. <a href="/reports/create?address={{ $address }}">File Report</a></p>
+				<hr>
+			<br>
+			<br>
+			<br>
 		@endif
 
 	</div>
@@ -100,6 +107,9 @@ $.ajax({
   	// Thanks blockcypher.com
   	$('#summary-table tr:last').after('<tr><th>Total Bitcoin Received</td><td class="font-weight-bold">'+ data.total_received / 100000000 +' BTC</td></tr>');
   	$('#summary-table tr:last').after('<tr><th>No. Transactions Received</td><td>'+ data.n_tx +'</td></tr>');
+  	if (data.total_received > 0) {
+  		$('#trace-ad').show();
+  	}
   },
   dataType: "json"
 });

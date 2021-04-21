@@ -30,7 +30,7 @@
 	</div>
 
 	<div class="container">
-		@include('ads.unit_1')
+		{{-- @include('ads.unit_1') --}}
 		<div class="row">
 			<div class="col-md-4">
 				<h3>Report Bitcoin Addresses</h3>
@@ -103,7 +103,7 @@
 	<br>
 	<br>
 
-	<div class="row">
+	<div class="row mb-4">
 		<div class="col-md-6">
 			<h4>What is BitcoinAbuse.com?</h4>
 			<p>BitcoinAbuse.com is a public database of bitcoin addresses used by hackers and criminals. Criminals are moving online now more than ever. Ransomeware like <em>wannacry</em> is spreading everyday.</p>
@@ -112,11 +112,12 @@
 			<p><i>~ The BitcoinAbuse Team</i></p>
 		</div>
 		<div class="col-md-6">
-			<div>
-				@include('ads.unit_1')
-			</div>
+            @include('ads.trace-ad-1')
 		</div>
 	</div>
+    <br>
+    <br>
+    <br>
 
 </main>
 
