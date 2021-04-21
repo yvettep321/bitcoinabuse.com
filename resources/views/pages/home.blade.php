@@ -117,7 +117,34 @@
 	</div>
     <br>
     <br>
+    <hr>
     <br>
+    <br>
+    <br>
+        <h3 class="text-center">Recently Reported Addresses:</h3>
+        <br>
+
+        <div class="row">
+            @foreach ($reports as $report)
+            <div class="col-xl-4 col-md-6 mb-3">
+                <a href="/reports/{{ $report->address }}">{{ $report->address }}</a>
+                <br> <i>{{ $report->created_at->diffForHumans() }}</i>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center">
+            <a href="/reports/create" class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Create Report</a>
+            <a href="/reports" class="btn btn-secondary btn-lg"> View All Reports <i class="fas fa-chevron-right ml-1"></i></a>
+        </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+
+
+
 
 </main>
 
