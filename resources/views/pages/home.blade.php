@@ -107,7 +107,7 @@
 		<div class="col-md-6">
 			<h4>What is BitcoinAbuse.com?</h4>
 			<p>BitcoinAbuse.com is a public database of bitcoin addresses used by hackers and criminals. Criminals are moving online now more than ever. Ransomeware like <em>wannacry</em> is spreading everyday.</p>
-			<p>Bitcoin is anonymous if used <u>perfectly</u>. Luckily, no one is perfect. Even hackers make mistakes. It only takes one mistake to link stolen bitcoin to a hacker's their real identity. </p>
+			<p>Bitcoin is anonymous if used <u>perfectly</u>. Luckily, no one is perfect. Even hackers make mistakes. It only takes one mistake to link stolen bitcoin to a hacker's real identity. </p>
 			<p>If you or your organization have been hit by ransomware, <a href="/reports/create">file a report</a>. You can then <a href="/reports">monitor bitcoin addresses</a> reported by you and by others. Thanks for making the Internet a safer place!</p>
 			<p><i>~ The BitcoinAbuse Team</i></p>
 		</div>
