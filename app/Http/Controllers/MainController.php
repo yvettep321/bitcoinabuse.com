@@ -56,6 +56,8 @@ class MainController extends Controller
 		// dd($monthsGraph);
 		// dd($daysGraph);
 
-		return view('pages.home', compact('dayCount', 'weekCount', 'monthCount', 'yearsGraph', 'monthsGraph', 'daysGraph'));
+		$reports = Reports::with('abuse_type')->orderBy('created_at','desc')->paginate(9);
+
+		return view('pages.home', compact('dayCount', 'weekCount', 'monthCount', 'yearsGraph', 'monthsGraph', 'daysGraph', 'reports'));
 	}
 }
