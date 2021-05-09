@@ -36,9 +36,9 @@
 					If you are aware of more addresses used in the commission of a crime, <a href="/reports/create">file a report</a>.
 				</p>
 			</div>
-			<div class="col-md-6">
+			{{-- <div class="col-md-6">
 				@include('ads.unit_1')
-			</div>
+			</div> --}}
 		</div>
 
 		<hr>
@@ -53,7 +53,7 @@
 		</div>
 		{{ $reports->links() }}
 
-		@include('ads.unit_1')
+		{{-- @include('ads.unit_1') --}}
 
 	</div>
 </main>
