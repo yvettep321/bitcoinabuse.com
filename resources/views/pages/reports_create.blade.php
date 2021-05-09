@@ -27,7 +27,7 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1" >
+			<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
 
 				@if ($errors->any())
 				<div class="card border-danger mb-3">

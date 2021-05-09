@@ -11,6 +11,11 @@ use App\AbuseTypes;
 
 class ReportController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('throttle:6,1')->only('store');
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -103,7 +108,6 @@ class ReportController extends Controller
 		$first_date = Reports::select('created_at')->where('address','=',$address)->orderBy('created_at','desc')->first();
 
 		$first_date = $first_date ? $first_date->created_at : null;
-
 
 		return view('pages.reports_show', compact('address','reports','found','first_date'));
 	}
